@@ -1,0 +1,84 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+  
+    /* justify-content: space-between; */
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    font-size: 18px;
+}
+
+
+table, th, td {
+    border:1px solid black;
+}
+.table {
+    width: 80%;
+    justify-content: center;
+    display: flex;
+    font-size: 19px;
+
+}
+.box {
+    background-color: rgb(33, 192, 197);
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 5px 15px;
+    padding: 15px;
+    font-size: 18px;
+    border-radius: 4px;
+}
+.button-wrapper {
+    display: flex;
+    justify-content: space-around;
+    padding:10px 0 2px 0;
+}
+button {
+    border-radius: 4px;
+    width: auto;
+    height: 30px;
+    font-size: 16px;
+    padding: 5px 15px;
+
+   cursor: pointer;
+}
+button + button {
+    margin-left: 5px;
+}
+.border-none {
+    border: none;
+}
+.input {
+    height: 40px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    padding-left: 8px;
+  
+}
+input + input {
+    margin-top: 8px;
+}
+.form {
+    display: flex;
+    flex-direction: column;
+    margin: 8px 0;
+}
+.button-add {
+   
+    margin-top: 20px ;
+}
+.button-add-country {
+    margin: 20px 0;
+}
+ 
+.center {
+    display: flex;
+    justify-content: space-evenly;
+}
+td {
+    padding: 4px;
+}
+.error {
+    color: red;
+    padding: 4px 0 8px 0;
+}

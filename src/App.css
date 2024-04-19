@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.content {
+    display: flex;
+  }
+  
+  /* .menu {
+    width: 20%;
+  } */
+  
+  .routes {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+  }
