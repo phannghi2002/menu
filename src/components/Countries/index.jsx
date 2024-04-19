@@ -3,7 +3,7 @@ import "./Countries.css";
 import { useState } from "react";
 import Tippy from "@tippyjs/react/headless";
 import { Formik, Form, Field } from "formik";
-import { SignupSchema } from "../Validate/index";
+import { SignupSchema } from "../CountrySchema/index";
 
 function Countries() {
   const [data, setData] = useState(CountryData);
