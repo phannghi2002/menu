@@ -3,14 +3,16 @@ import "./Countries.css";
 import { useState } from "react";
 import Tippy from "@tippyjs/react/headless";
 import { Formik, Form, Field } from "formik";
-import { SignupSchema } from "../CountrySchema/index";
+import { CountrySchema } from "../CountrySchema/index";
 
 function Countries() {
   const [data, setData] = useState(CountryData);
   const [id, setID] = useState(null);
 
-  const handleYes = (code) => {
-    setData(data.filter((country) => country.code !== code));
+  const handleYes = (index) => {
+    const newData = [...data];
+    newData.splice(index, 1);
+    setData(newData);
   };
 
   const toggleTippyVisibility = (index) => {
@@ -46,7 +48,7 @@ function Countries() {
                 code: "",
                 description: "",
               }}
-              validationSchema={SignupSchema}
+              validationSchema={CountrySchema}
               onSubmit={(values) => {
                 handleAdd(values);
               }}
@@ -116,7 +118,7 @@ function Countries() {
                               code: country.code,
                               description: country.description,
                             }}
-                            validationSchema={SignupSchema}
+                            validationSchema={CountrySchema}
                             enableReinitialize
                             onSubmit={(values) => {
                               handleEdit(values, index);
@@ -181,7 +183,7 @@ function Countries() {
                             <button
                               className="border-none"
                               onClick={() => {
-                                handleYes(country.code);
+                                handleYes(index);
                                 setID(null);
                               }}
                             >
