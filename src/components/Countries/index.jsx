@@ -31,7 +31,6 @@ function Countries() {
 
     // Update the state with the new data array
     setData(newData);
-    setID(null);
   };
   return (
     <div className="wrapper">
@@ -106,7 +105,6 @@ function Countries() {
                   <td className="center">
                     <Tippy
                       trigger="click"
-                      theme="tippy"
                       interactive
                       render={(attrs) => (
                         <div className="box" tabIndex="-1" {...attrs}>
