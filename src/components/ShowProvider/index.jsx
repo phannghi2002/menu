@@ -8,7 +8,7 @@ const ShowContext = createContext();
 export const useShowContext = () => useContext(ShowContext);
 
 export const ShowProvider = ({ children }) => {
-  const [show, setShow] = useState(false);
+  const [show, setShow] = useState(true);
 
   return (
     <ShowContext.Provider value={{ show, setShow }}>
